@@ -25,14 +25,17 @@ class SaveSongs:
                                })
         
         response_json = response.json()
-        print(response)
+        # print(response)
         # print(response_json)
         
         for i in response_json["items"]:
             self.tracks += (i["track"]["uri"] + ",")
         self.tracks = self.tracks[:-1]
         
+        
+        
         self.AddToPlaylist()
+
         
     
     def CreatePlaylist(self):
@@ -41,11 +44,11 @@ class SaveSongs:
         today = date.today()
         todayformatted = today.strftime("%d/%m/%y")
         
-        query = "https://api.spotify.com/v1/users/{}/playlists".format(self.spotify_token)
+        query = "https://api.spotify.com/v1/users/{}/playlists".format(self.user_id)
         
         request_body = json.dumps({
                 'name' : todayformatted +  " discover",
-                'description' :"Discover Weekly saved by That one night you didnt slle scripting python",
+                'description' :"Discover Weekly saved by That one night you didnt sleep scripting python",
                 'public':True
         })
         
@@ -58,24 +61,25 @@ class SaveSongs:
                      }
         )
         response_json = response.json()
-        # return response_json["id"]
-        print(response_json)
-        print(response)
+        
+        # print(response_json)
+        # print(response)
+        return response_json["id"]
+    
+    
 
     def AddToPlaylist(self):
+        
+        
         print("Adding Songs to created playlist...")
         self.new_playlist_id = self.CreatePlaylist()
         
-        
-        
-        query = "https://api.spotify.com/v1/playlists/{}/tracks?={}".format(self.new_playlist_id , self.tracks)
+        query = "https://api.spotify.com/v1/playlists/{}/tracks?url={}".format(self.new_playlist_id , self.tracks)
         response = requests.post(query ,  headers={
                                                     "Content-Type": "application/json",
-                                                    "Authorization": "Bearer {}".format(self.spotify_token)
-                                                    }
-                                 )
-        print(response)
-        response_json = response.json
+                                                    "Authorization": "Bearer {}".format(self.spotify_token)})
+        print(response.json)
+        
         
         
     def CallRefresh(self):
@@ -86,7 +90,4 @@ class SaveSongs:
         
         self.FindSongs()
         
-        
-        
-# a = SaveSongs()
-# a.CallRefresh()
+    

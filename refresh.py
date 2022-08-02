@@ -20,6 +20,3 @@ class Refresh:
         response_json = response.json()
         return response_json['access_token']
     
-# a = Refresh()
-# z = a.refresh()
-# print(z)

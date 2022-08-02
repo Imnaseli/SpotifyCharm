@@ -12,6 +12,7 @@ Will add more features to it in the future , if i ever want to come back to it
 
 ### Current Issues
 
-Invalid Username 
+The AddToPlaylist definition in the SaveSong class in main,pykeeps responding 400
+Look into the defition some more. 
 -Thats honestly the only Problem
 
