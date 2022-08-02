@@ -74,11 +74,11 @@ class SaveSongs:
         print("Adding Songs to created playlist...")
         self.new_playlist_id = self.CreatePlaylist()
         
-        query = "https://api.spotify.com/v1/playlists/{}/tracks?url={}".format(self.new_playlist_id , self.tracks)
+        query = "https://api.spotify.com/v1/playlists/{}/tracks?uris={}".format(self.new_playlist_id , self.tracks)
         response = requests.post(query ,  headers={
                                                     "Content-Type": "application/json",
                                                     "Authorization": "Bearer {}".format(self.spotify_token)})
-        print(response.json)
+        # print(response.json)
         
         
         
