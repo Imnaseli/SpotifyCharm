@@ -47,8 +47,8 @@ class SaveSongs:
         query = "https://api.spotify.com/v1/users/{}/playlists".format(self.user_id)
         
         request_body = json.dumps({
-                'name' : todayformatted +  " discover",
-                'description' :"Discover Weekly saved by That one night you didnt sleep scripting python",
+                'name' : todayformatted +  " Discover",
+                'description' :"Discover Weekly saved by that one night you didnt sleep all night scripting python",
                 'public':True
         })
         
