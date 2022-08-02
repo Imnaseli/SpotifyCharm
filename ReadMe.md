@@ -8,7 +8,10 @@ and saves it as part of my playlist
 Honestly the code is still shaky,
 but its cool, ill soon get it fixed.
 
+Will add more features to it in the future , if i ever want to come back to it
+
 ### Current Issues
 
 Invalid Username 
 -Thats honestly the only Problem
+
