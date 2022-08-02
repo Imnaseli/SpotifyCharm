@@ -1,18 +1,18 @@
 ## Yo Yo Yo
 
-Spotify API + Python,
+This program was built because i always had issues adding my Discover weekly songs to a new playlist before it disappears,(So its an actual issue)
+So i present SpotifyCharms,
 
-The app Creates a Playlist of my discover wekly, Automatically (Because, im too lazy to do soo)
+This python script works with the Spotify API to automate Spotify
+
+Spotify API + Python = "Happy Sijibomi"
+
+The app Creates a Playlist of my discover weekly, Automatically (Because, im too lazy to do soo)
 and saves it as part of my playlist
 
-Honestly the code is still shaky,
-but its cool, ill soon get it fixed.
 
-Will add more features to it in the future , if i ever want to come back to it
+I'm not done yet,
+i will keep adding features to it to make it the ultimate Spotify api calling application,
+and might even add some GUI for it later.
 
-### Current Issues
-
-The AddToPlaylist definition in the SaveSong class in main,pykeeps responding 400
-Look into the defition some more. 
--Thats honestly the only Problem
 
