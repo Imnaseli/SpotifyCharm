@@ -11,11 +11,15 @@ The app Creates a Playlist of my discover weekly, Automatically (Because, im too
 and saves it as part of my playlist
 
 And it actually works
+
+<div align="center">
+
 ###
 
 <img src="https://i.pinimg.com/564x/68/db/c0/68dbc0fe4769a2513ff5ee1e0134ba80.jpg">
 
 ###
+</div>
 That playlist was made with the api when i was Modifiying this ReadMe file
 
 I'm not done yet,
